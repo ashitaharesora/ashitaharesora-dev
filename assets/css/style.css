@@ -707,6 +707,64 @@ main {
   }
 }
 
+.home-page .hero.hero-slideshow::before {
+  background: linear-gradient(115deg, var(--hero-overlay), rgba(0, 50, 80, .22) 55%, rgba(0, 50, 80, .10));
+  z-index: 1;
+  pointer-events: none;
+}
+
+.home-page .hero-slideshow .hero-slide {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: var(--hero-slide-position);
+  background-repeat: no-repeat;
+  pointer-events: none;
+}
+
+.home-page .hero-slideshow .hero-slide--first {
+  --hero-slide-position: 82% center;
+  background-image: url('../img/photo1.jpg');
+}
+
+.home-page .hero-slideshow .hero-slide--second {
+  --hero-slide-position: center 58%;
+  background-image: url('../img/Nagamachi.png');
+  opacity: 0;
+  transition: opacity 2s ease-in-out;
+  will-change: opacity;
+}
+
+.home-page .hero-slideshow .hero-slide--second.is-active {
+  opacity: 1;
+}
+
+.home-page .hero-slideshow .container {
+  z-index: 2;
+}
+
+@media (max-width: 900px) {
+  .home-page .hero-slideshow .hero-slide--first {
+    --hero-slide-position: 78% 20%;
+  }
+
+  .home-page .hero-slideshow .hero-slide--second {
+    --hero-slide-position: center center;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-page .hero-slideshow .hero-slide--second {
+    opacity: 0;
+    transition: none;
+    will-change: auto;
+  }
+
+  .home-page .hero-slideshow .hero-slide--second.is-active {
+    opacity: 0;
+  }
+}
+
 @media (min-width: 901px) {
   .home-page .hero .container {
     padding-top: 130px;

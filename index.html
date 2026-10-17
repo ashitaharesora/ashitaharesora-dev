@@ -25,7 +25,9 @@
   <link rel="icon" href="assets/img/Logo.PNG" type="image/png">
   <link rel="apple-touch-icon" href="assets/img/Logo.PNG">
   <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="preload" as="image" href="assets/img/photo1.jpg" fetchpriority="high">
   <script defer src="assets/js/main.js"></script>
+  <script defer src="assets/js/hero-slideshow.js"></script>
   <script defer src="assets/js/posts.js"></script>
 
   <script type="application/ld+json">
@@ -76,7 +78,9 @@
   </header>
 
   <main>
-    <section class="hero" style="background-image: url('assets/img/photo1.jpg');">
+    <section class="hero hero-slideshow" data-hero-slideshow>
+      <div class="hero-slide hero-slide--first" data-slide-src="assets/img/photo1.jpg" aria-hidden="true"></div>
+      <div class="hero-slide hero-slide--second" data-slide-src="assets/img/Nagamachi.png" aria-hidden="true"></div>
       <div class="container">
         <div class="hero-content-box">
           <div class="hero-kicker js-fade-up delay-1">税理士 × 社会保険労務士</div>
