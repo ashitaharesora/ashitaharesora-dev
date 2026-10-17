@@ -1,0 +1,9 @@
+url: "https://ashitaharesora.github.io"
+baseurl: "/ashitaharesora-dev"
+exclude:
+  - scripts
+  - templates
+  - README.md
+  - package.json
+  - package-lock.json
+  - "金沢市の税理士・確定申告（個人事業・法人）・開業のご相談｜なほ税理士事務所 (2026_4_20 23：37：04).html"

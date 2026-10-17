@@ -4,10 +4,10 @@ import path from "node:path";
 const root = path.resolve(".");
 const dataDir = path.join(root, "assets/data");
 const templatesDir = path.join(root, "templates");
-const SITE_URL = "https://ashitaharesora.jp";
+const SITE_URL = "https://ashitaharesora.github.io/ashitaharesora-dev";
 
 function buildPageUrl(pathname) {
-  return new URL(pathname, `${SITE_URL}/`).toString();
+  return new URL(pathname.replace(/^\/+/, ""), `${SITE_URL}/`).toString();
 }
 
 async function readJson(file) {
