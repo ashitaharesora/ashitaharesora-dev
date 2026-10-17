@@ -1,0 +1,11 @@
+{
+  "name": "ashitaharesora-site",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "fetch:cms": "node scripts/fetch-microcms.js",
+    "build:pages": "node scripts/build-pages.mjs",
+    "apply:head": "node scripts/apply-head-analytics.mjs",
+    "build": "npm run fetch:cms && npm run build:pages && npm run apply:head"
+  }
+}
