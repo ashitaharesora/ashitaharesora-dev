@@ -765,7 +765,7 @@ main {
 .home-page .hero-slideshow .hero-local-subtitle {
   display: block;
   color: rgba(255, 255, 255, .9);
-  font-size: 13px;
+  font-size: 14px;
   line-height: 1.9;
   letter-spacing: .04em;
   overflow-wrap: anywhere;
@@ -782,10 +782,6 @@ main {
 
   .home-page .hero-slideshow .hero-local-intro {
     margin-bottom: 16px;
-  }
-
-  .home-page .hero-slideshow .hero-local-title {
-    font-size: 13.5px;
   }
 }
 
